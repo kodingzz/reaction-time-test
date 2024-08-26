@@ -1,0 +1,29 @@
+#content {
+  width: 100%;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  cursor: pointer;
+  font-family: "Nerko One", cursive;
+}
+.description {
+  padding: 18rem;
+}
+
+.description h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.description p {
+  font-size: 2rem;
+}
+
+.red {
+  background-color: #ce2636;
+}
+.green {
+  background-color: #4bdb6a;
+}
+.blue {
+  background-color: #2b87d1;
+}
