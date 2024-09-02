@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Result from "./Result";
 
-const randomTime = Math.floor(Math.random() * 3) + 3; // 3~5초사이
+const randomTime = Math.random() * 3 + 3; // 3~5초사이
 
 export default function Main() {
   const timer = useRef();
@@ -9,9 +9,7 @@ export default function Main() {
   const [timeStart, setTimeStart] = useState(0);
   const [condition, setCondition] = useState("start");
 
-  const timerIsActive = timeRemaining > 0 && timeRemaining < randomTime * 1000;
-
-  console.log(timeStart);
+  const timerIsWaiting = timeRemaining > 0 && timeRemaining < randomTime * 1000;
 
   if (timeRemaining <= 0) {
     setCondition("click");
@@ -45,7 +43,7 @@ export default function Main() {
     <Result
       condition={condition}
       onClick={
-        timerIsActive
+        timerIsWaiting
           ? handleBtnCancel
           : condition === "restart" || timeStart === 0
           ? handleBtnStart
